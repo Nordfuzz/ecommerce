@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carol Ellis Clothing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Vollkorn:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="clothing.css">
+
+</head>
+
+
+<body>
+    <section id="menu" class="nav-wrapper">
+        
+        <a href="index.html" ><button  class="logo-secondary"></button></a>
+    
+       
+        <div class="burguer-container">
+            <a href="#menu-principal" id="enlace-menu" class="lanzador-menu">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+            <span class="cart-button-movile"><a href="#" >3</a></span>
+        </div>
+    
+        <nav class="menu-oculto-clothing">
+    
+            <ul id="menu-principal">
+                <li><a href="clothing.html?#tshirts">T-Shirts</a></li>
+                <li><a href="clothing.html?#hoodies">Hoodies & Sweaters</a></li>
+                <!-- <li><a href="#">Bucket & Beanies</a></li> -->
+                <!-- <li><a href="#">Socks</a></li> -->
+            </ul>
+        </nav>
+        
+    </section>
+    <div class="product-container">
+        <div class="img-container box1">
+            <div class="product-img">
+            </div>
+        </div>
+        <div class="product-details">
+            <div class="description-container">
+            </div>
+            <div class="colors-container">
+            </div>
+            <div class="size-container">
+            </div>
+            <div class="price-container">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="pre-footer">
+
+                <ul class="social-wrapper">
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+                <form class="footer-form" action="subscribe">
+                    <input type="text" placeholder="Enter e-mail for early access...">
+                    <button class="button submit">Subscribe</button>
+                </form>
+
+        </div>
+
+        <nav id="footer-nav" class="footer-nav">
+            <ul class="footer-nav-wrapper">
+                <li><a href="">Contact</a></li>
+                <li><a href="">Shipping & Returns</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Size Guide</a></li>
+            </ul>
+
+        </nav>
+
+    </footer>
+    
+    <script>
+        // Obtiene el valor del parámetro 'product' de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('product');
+        
+        // Define un objeto con detalles de productos
+        const products = {
+            1: {
+                image: "media/Camisetas/catSmall-tshirt-grey.png",
+                description: "Zen Cat 100% Cotton",
+                colors: [
+            {name: "white", style: "background-color: #ffffff;", image: "media/Camisetas/catSmall-tshirt-white.png" },
+            {name: "grey", style: "background-color: #6f6f6fd4;", image: "media/Camisetas/catSmall-tshirt-grey.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "20€"
+            },
+            2: {
+                image: "media/Camisetas/clow-tshirt-grey.png",
+                description: "Clow 100% Cotton TEE",
+                colors: [
+            {name: "white", style: "background-color: #ffffff;", image:"media/Camisetas/clow-tshirt-white.png" },
+            {name: "black", style: "background-color: #474747;", image:"media/Camisetas/clow-tshirt-black.png" },
+            {name: "grey", style: "background-color: #6f6f6fd4;", image:"media/Camisetas/clow-tshirt-grey.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "20€"
+            },
+            3: {
+                image: "media/Camisetas/arcade-tshirt-royal.png",
+                description: "Arcade 100% Cotton TEE",
+                colors: [
+                    { name: "white", style: "background-color: #ffffff;", image:"media/Camisetas/arcade-tshirt-white.png" },
+                    { name: "black", style: "background-color: #474747;", image:"media/Camisetas/arcade-tshirt-black.png" },
+                    { name: "royal", style: "background-color: #10477a;", image:"media/Camisetas/arcade-tshirt-royal.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "20€"
+            },
+            4: {
+                image: "media/Camisetas/bigBang-tshirt-black.png",
+                description: "Big Bang 100% Cotton TEE",
+                colors: [
+            {name: "white", style: "background-color: #ffffff;", image:"media/Camisetas/bigBang-tshirt-white.png" },
+            {name: "black", style: "background-color: #474747;", image:"media/Camisetas/bigBang-tshirt-black.png" },
+            {name: "grey", style: "background-color: #6f6f6fd4;", image:"media/Camisetas/bigBang-tshirt-grey.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "20€"
+            },
+            5: {
+                image: "media/Camisetas/berlin-tshirt-appleGreen.png",
+                description: "Berlin 100% Cotton TEE",
+                colors: [
+            {name: "appleGreen", style: "background-color: #9fff6fd4;", image:"media/Camisetas/berlin-tshirt-appleGreen.png" },
+            {name: "cardinalScarlet", style: "background-color: #b53131;", image:"media/Camisetas/berlin-tshirt-cardinalScarlet.png" },
+            {name: "black", style: "background-color: #474747;", image:"media/Camisetas/berlin-tshirt-black.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "20€"
+            },
+            6: {
+                image: "media/Camisetas/shoe-tshirt-white.png" ,
+                description: "Shoe 100% Cotton TEE",
+                colors: [
+            { name: "white", style: "background-color: #ffffff;", image:"media/Camisetas/shoe-tshirt-white.png" },
+            { name: "grey", style: "background-color: #6f6f6fd4;", image:"media/Camisetas/shoe-tshirt-grey.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "20€"
+            },
+            7: {
+                image: "media/Camisetas/vampSmall-tshirt-grey.png",
+                description: "Vamp 100% Cotton TEE",
+                colors: [
+            { name: "white", style: "background-color: #ffffff;", image:"media/Camisetas/vampSmall-tshirt-white.png" },
+            { name: "black", style: "background-color: #474747;", image:"media/Camisetas/vampSmall-tshirt-black.png" },
+            { name: "grey", style: "background-color: #6f6f6fd4;", image:"media/Camisetas/vampSmall-tshirt-grey.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "20€"
+            },
+            8: {
+                image: "media/Camisetas/wolf-tshirt-grey.png",
+                description: "Wolf 100% Cotton TEE",
+                colors: [
+            { name: "white", style: "background-color: #ffffff;", image:"media/Camisetas/wolf-tshirt-white.png" },
+            { name: "grey", style: "background-color: #6f6f6fd4;", image:"media/Camisetas/wolf-tshirt-grey.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "20€"
+            },
+            9: {
+                image: "media/Sudaderas/arbol-hoodie-black.png",
+                description: "Noise 100% Cotton HOODIE",
+                colors: [
+            { name: "black", style: "background-color: #474747;", image:"media/Sudaderas/arbol-hoodie-black.png" },
+            { name: "royal", style: "background-color: #10477a;", image:"media/Sudaderas/arbol-hoodie-royal.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "30€"
+            },
+            10: {
+                image: "media/Sudaderas/laughing-hoodie-cardinalScarlet.png",
+                description: "Laughing Cat 100% Cotton HOODIE",
+                colors: [
+            { name: "black", style: "background-color: #474747;", image:"media/Sudaderas/laughing-hoodie-black.png" },
+            { name: "lightGrey", style: "background-color: #c7c5c5;", image:"media/Sudaderas/laughing-hoodie-lightGrey.png" },
+            { name: "royal", style: "background-color: #10477a;", image:"media/Sudaderas/laughing-hoodie-royal.png" },
+            { name: "banana", style: "background-color: #fef53c;", image:"media/Sudaderas/laughing-hoodie-banana.png" },
+            { name: "cardinalScarlet", style: "background-color: #b53131;", image:"media/Sudaderas/laughing-hoodie-cardinalScarlet.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "30€"
+            },
+            11: {
+                image: "media/Sudaderas/nofuture-hoodie-black.png",
+                description: "No Future 100% Cotton HOODIE",
+                colors: [
+            { name: "black", style: "background-color: #474747;", image:"media/Sudaderas/nofuture-hoodie-black.png" },
+            { name: "royal", style: "background-color: #10477a;", image:"media/Sudaderas/nofuture-hoodie-royal.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "30€"
+            },
+            12: {
+                image: "media/Sudaderas/play-hoodie-royal.png",
+                description: "Play 100% Cotton HOODIE",
+                colors: [
+            { name: "black", style: "background-color: #352d2d;", image:"media/Sudaderas/play-hoodie-black.png" },
+            { name: "royal", style: "background-color: #10477a;", image:"media/Sudaderas/play-hoodie-royal.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "30€"
+            },
+            13: {
+                image: "media/Sudaderas/ovni-hoodie-black.png",
+                description: "UFO 100% Cotton HOODIE",
+                colors: [
+            { name: "black", style: "background-color: #352d2d;", image:"media/Sudaderas/ovni-hoodie-black.png" },
+            { name: "cardinalScarlet", style: "background-color: #b53131;", image:"media/Sudaderas/ovni-hoodie-cardinalScarlet.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "30€"
+            },
+            14: {
+                image: "media/Sudaderas/wolfGreen-hoodie-royal.png",
+                description: "Wolf 100% Cotton HOODIE",
+                colors: [
+            { name: "black", style: "background-color: #352d2d;", image:"media/Sudaderas/wolfGreen-hoodie-black.png" },
+            { name: "royal", style: "background-color: #10477a;", image:"media/Sudaderas/wolfGreen-hoodie-royal.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "30€"
+            },
+            15: {
+                image: "media/Sudaderas/teg-hoodie-royal.png",
+                description: "TEG 100% Cotton HOODIE",
+                colors: [
+            { name: "black", style: "background-color: #352d2d;", image:"media/Sudaderas/teg-hoodie-black.png" },
+            { name: "royal", style: "background-color: #10477a;", image:"media/Sudaderas/teg-hoodie-royal.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "30€"
+            },
+            16: {
+                image: "media/Sudaderas/croco-hoodie-bananaCream.png",
+                description: "Croco 100% Cotton HOODIE",
+                colors: [
+            { name: "black", style: "background-color: #352d2d;", image:"media/Sudaderas/croco-hoodie-black.png" },
+            { name: "royal", style: "background-color: #10477a;", image:"media/Sudaderas/croco-hoodie-royal.png" },
+            { name: "bananaCream", style: "background-color: #fff872df;", image:"media/Sudaderas/croco-hoodie-bananaCream.png" }
+        ],
+                size: [
+            {name: "S", style: "background-color: red;"},
+            {name: "M", style: "background-color: red;"},
+            {name: "L", style: "background-color: red;"},
+            {name: "XL", style: "background-color: red;"},
+        ],
+                price: "30€"
+            },
+            // Agrega detalles para otros productos
+        };
+
+        // Encuentra el producto correspondiente por su ID
+        const product = products[productId];
+
+        if (product) {
+            // Rellena la página con la imagen del producto
+            document.querySelector(".product-img").innerHTML = `
+                <img src="${product.image}" alt="Producto">
+            `;
+
+            document.querySelector(".description-container").innerHTML = `
+                <p>${product.description}</p>
+            `;
+
+            document.querySelector(".colors-container").innerHTML = `
+                <p>${product.colors}</p>
+            `;
+            document.querySelector(".size-container").innerHTML = `
+                <p>${product.size}</p>
+            `;
+
+            document.querySelector(".price-container").innerHTML = `
+                <p>${product.price}</p>
+            `;
+        } else {
+            // Si no se encuentra un producto válido, muestra un mensaje de error
+            document.querySelector(".product-details").textContent = "Producto no encontrado.";
+        }
+
+        const colorsContainer = document.querySelector(".colors-container");
+    colorsContainer.innerHTML = product.colors.map(color => {
+    return `<div class="color" style="${color.style}" data-src="${color.image}"></div>`;
+    }).join('');
+
+
+        const sizeContainer = document.querySelector(".size-container");
+    sizeContainer.innerHTML = product.size.map(size => {
+    return `<div class="size">${size.name}</div>`;
+    }).join('');
+
+    // Obtén la referencia a la imagen de la camiseta
+const productImage = document.querySelector("#product-img");
+
+// ...
+
+// Agrega un manejador de eventos a cada elemento de color
+var buttonsColor = document.querySelectorAll(".color");
+
+for (let i = 0; i < buttonsColor.length; i++) {
+    let button = buttonsColor[i];
+
+    let dataColor = "";
+    const colorClasses = ["white", "black", "grey", "royal", "cardinalScarlet", "appleGreen","forestGreen","sand","lightGrey"];
+
+    for (let j = 0; j < button.classList.length; j++) {
+        if (colorClasses.includes(button.classList[j])) {
+            dataColor = button.classList[j];
+            break; 
+        }
+    }
+
+    function onChangeProductImage(event) {
+        let newSrc = event.target.dataset.src;
+        document.querySelector(".product-img").innerHTML = 
+        `<img src="${newSrc}" alt="Producto">`;
+    }
+
+    button.addEventListener('click', onChangeProductImage);
+}
+
+
+
+    </script>
+</body>
